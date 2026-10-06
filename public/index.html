@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secure Gate | Smart Society Management</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+<div class="particles-bg"></div>
+<header class="navbar">
+<div class="logo"><i class="fas fa-shield-alt"></i> SecureGate</div>
+<nav id="navbar-nav">
+<a href="#features"><i class="fas fa-star"></i> Features</a>
+<a href="#about"><i class="fas fa-trophy"></i> Why Us</a>
+<a href="login.html" class="btn-outline"><i class="fas fa-sign-in-alt"></i> Login</a>
+<a href="signup.html" class="btn-primary"><i class="fas fa-user-plus"></i> Sign Up</a>
+<a href="admin-login.html" class="btn-admin"><i class="fas fa-user-shield"></i> Admin</a>
+</nav>
+<div class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</header>
+<section class="hero">
+<div class="hero-bg-animation"></div>
+<div class="hero-content">
+<div class="hero-badge" data-aos="fade-down" data-aos-delay="200">Smart Security Solution</div>
+<h1 class="hero-title" data-aos="fade-up" data-aos-delay="400">Smart Security for<br><span class="gradient-text">Modern Societies</span></h1>
+<p class="hero-subtitle" data-aos="fade-up" data-aos-delay="600">Visitor Management • Complaint Tracking • Real-Time Updates</p>
+<div class="hero-buttons" data-aos="fade-up" data-aos-delay="800">
+<a href="signup.html" class="btn-primary large-btn hero-btn"><i class="fas fa-rocket"></i> Get Started</a>
+<a href="login.html" class="btn-outline large-btn hero-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+</div>
+<div class="hero-scroll-indicator"><i class="fas fa-chevron-down"></i></div>
+</div>
+</section>
+<section id="features" class="features">
+<div class="section-header" data-aos="fade-up"><h2>Services We Provide</h2></div>
+<div class="feature-grid">
+<div class="feature-card" data-aos="zoom-in" data-aos-delay="100"><div class="feature-icon"><i class="fas fa-users"></i></div><h3>Visitor Management</h3><p>Approve visitors with OTP and track entry logs.</p></div>
+<div class="feature-card" data-aos="zoom-in" data-aos-delay="200"><div class="feature-icon"><i class="fas fa-camera"></i></div><h3>Complaint System</h3><p>Upload issues with images/videos and track progress.</p></div>
+<div class="feature-card" data-aos="zoom-in" data-aos-delay="300"><div class="feature-icon"><i class="fas fa-tachometer-alt"></i></div><h3>Admin Dashboard</h3><p>Manage society operations from a central control panel.</p></div>
+<div class="feature-card" data-aos="zoom-in" data-aos-delay="400"><div class="feature-icon"><i class="fas fa-mobile-alt"></i></div><h3>Cross Device Access</h3><p>Works seamlessly on mobile, tablet and desktop.</p></div>
+</div>
+</section>
+<section id="about" class="about"><div class="about-content" data-aos="fade-up"><h2>Why Use SecureGate?</h2><p>SecureGate simplifies society security and communication. Built with scalable cloud architecture, real-time database connectivity, and modern UI standards.</p></div></section>
+<footer><p>© 2026 SecureGate. All rights reserved.</p></footer>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+window.addEventListener('scroll',()=>{const navbar=document.querySelector('.navbar');if(window.scrollY>50)navbar.classList.add('scrolled');else navbar.classList.remove('scrolled');});
+function toggleMenu(){document.getElementById('navbar-nav').classList.toggle('active');}
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>anchor.addEventListener('click',function(e){e.preventDefault();const target=document.querySelector(this.getAttribute('href'));if(target)target.scrollIntoView({behavior:'smooth',block:'start'});}));
+document.addEventListener('DOMContentLoaded',()=>AOS.init({duration:900,once:true,offset:100}));
+</script>
+</body>
+</html>
